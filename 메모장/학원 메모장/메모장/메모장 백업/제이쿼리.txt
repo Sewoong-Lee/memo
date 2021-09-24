@@ -1,0 +1,10 @@
+tern
+제이쿼리
+
+제이쿼리 홈페이지 https://jquery.com/download/
+
+구글 CDN 스크립트 링크 복사 붙여넣기
+또는 받아서 배포해도 가능
+<script src="jquery-3.6.0.js"></script>
+
+

@@ -1,0 +1,23 @@
+PMD 주소
+https://pmd.github.io/pmd-eclipse-plugin-p2-site/
+
+플러그인 설치 후
+
+윈도우 프리페어런스에 pmd 의 룰 컨피그 확인
+
+맨 위에 use 체크 후 현재 룰 쉬프트로 블럭으로 잡은 후 엑스
+
+아래의 임포트
+
+https://pmd.sourceforge.io/pmd-4.3.0/integrations.html#eclipse
+
+에서 받은 3.8이상의 kor 임포트
+
+그룹 보기 형식을 룰셋으로 하면 방금 적용된거 보임
+
+체크박스 체크 하고 어플라이
+
+프로젝트 우클릭 pmd -> 코드체크
+
+없애려면 -> 코드체크 파로 위 클리어 바이올레이션
+

@@ -1,0 +1,33 @@
+****** 웹팩 설치
+
+노드js 깔고
+
+cmd로 <숫자야구> 폴더 들어와서
+
+npm init
+
+패키지명 정하고 다 앤터
+
+npm install vue 로 뷰 설치 (npm i vue)
+
+npm i webpack webpack-cli -D
+
+<숫자야구> 폴더에 
+
+webpack.config.js 파일 생성 (설정을 저장)
+
+<숫자야구> 폴더에 main.js 생성 (뷰 인스턴스 부분)
+
+import Vue from 'vue'; //뷰 설치한걸 가져옴
+
+new Vue().$mount('#root'); //mount : el 역할을 해줌
+
+
+
+
+NumberBassball.vue 생성(컴포넌트가 들어감)
+<template>, <script>, <style> 이 기본
+
+터미널 npm i vue-loader -D 로 뷰 로더 추가
+
+npm i vue-template-compiler@2.6.14 -D 추가 (@2.6.14로 버전 설정 뷰랑 같은 버전으로)

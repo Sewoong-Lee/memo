@@ -1,0 +1,11 @@
+폰트어썸
+https://fontawesome.com/
+아이콘
+
+링크 주소 받아야함
+(<script src="https://kit.fontawesome.com/30485624b3.js" crossorigin="anonymous"></script>)
+받고 html에 추가
+
+원하는 아이콘의 사이트 클레스 복사
+
+버튼 등의 내용에 넣으면 그 이미지 나옴 

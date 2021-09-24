@@ -1,0 +1,16 @@
+https://jsoup.org/download
+
+jsoup-1.13.1.jar  다운
+
+
+
+크롬 드라이버 다운
+https://chromedriver.chromium.org/downloads
+윈도우 버젼 다운
+chromedriver.exe
+
+
+selenium  다운
+selenium  홈페이지 -. 웹드라이버 -> 자바용 다운
+client-combined-3.141.59.jar 및 라이브러리 추가
+

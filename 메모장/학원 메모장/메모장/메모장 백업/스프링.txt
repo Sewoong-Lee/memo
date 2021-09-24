@@ -1,0 +1,86 @@
+새로 워크스페이스 
+
+이클립스 마켓플레이스 - sts검색 - 스프링 툴 3 - 리스타팅나우 -
+오른쪽 + - 스프링 - 파일 뉴 스플링레거시프로젝트 - 
+스프링 MVC프로젝트 - 이름넣고 - 
+탑레벨패키지 설정(3단계로)  org.spring.my - 설정 워크스페이스 웹의 css등 utf8 로 바꿈
+- 왼쪽 아래 서버 - 아파치 톰켓9 - 서버 위치 잡아주기 - 
+충돌나면 서버 더블클릭 8080을 8081로
+- pom.xml 
+<org.springframework-version>5.2.15.RELEASE</org.springframework-version>
+변경 (메이븐 버전 변경)
+(-구글 메이븐 레포지토리(https://mvnrepository.com/)
+- springframework 검색 - 
+Spring Context - 5.2.15.RELEASE) 여기에 있음
+(메이븐 라이브러리 저장소 다운가능 홈페이지)
+
+**************메이븐 로컬 레파지토리 위치
+C:\Users\301-15(사용자이름)\.m2\repository
+(여기에 정의되면 스프링에서 사용)
+
+아래 익스펙트 폼 -  <name>Central Repository</name><url>https://repo.maven.apache.org/maven2</url>
+가 원격 레파지토리 기본 저장소
+
+https://mvnrepository.com/에서 오라클 검색
+6버젼 - 버젼 누르고 메이븐 경로 클릭
+- pom.xml dependencies 아래에 복사 - 저장
+- 에러남(저장소가 안맞아서) - 
+저장소 위치가 센트럴이므로 센트럴 꺼로 찾아서 변경
+- 잘 동작 안하면 폴더의 파일 삭제 - 다시 링크 저장
+
+우선 jstl, mybatis 만 추가로 받음 MyBatis Spring 추가
+
+추가로
+ <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+을 자바 버젼에 맞게 (현재 11)(자바 버젼은 프리페어런스- 자바- 인스톨에서 확인)
+- 프로젝트 우클- 메이븐- 업데이트 프로젝트 - 
+
+<artifactId>servlet-api</artifactId>
+<version>2.5</version>
+도 4.0.1 버젼으로 변경(위 사이트에서 복붙) - 다시 업데이트
+
+*************한글 꺠질때
+web.xml - </web-app> 위에 아래 내용 적음
+<!-- 한글처리 필터 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>
+			org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<!-- 생성자 매개변수 -->
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>	
+		<init-param>
+			<!-- HttpSevletRequest에 encoding 설정이 있어도 encoding강제화 -->
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>	
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>	
+	</filter-mapping>
+
+
+jsp로 바로 못가니 서블렛 메소드 호출
+http://localhost:8081/my/stringmethod 이렇게 찾아가기
+
+***********
+log가 안되면 log4j.xml 문제
+
+**********
+자바 패키지가 추가되면  servlet-context.xml 에 추가 해줘야댐
+보통은 기존 폴더 밑에 만듬 (org.spring.my.controller;)
+
+
+
+
+
+
+
+

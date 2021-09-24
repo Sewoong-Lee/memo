@@ -1,0 +1,94 @@
+
+C:\Program Files\Git>cd ..
+
+C:\Program Files>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 36C1-A283
+
+ C:\Program Files 디렉터리
+
+2021-04-09  오후 02:54    <DIR>          .
+2021-04-09  오후 02:54    <DIR>          ..
+2019-11-14  오후 06:41    <DIR>          Adobe
+2021-04-08  오전 09:53    <DIR>          Application Verifier
+2021-04-08  오후 06:22    <DIR>          Autodesk
+2019-11-13  오후 08:57    <DIR>          Bandizip
+2021-04-08  오후 06:21    <DIR>          Common Files
+2021-04-09  오후 02:55    <DIR>          Git
+2021-03-29  오전 10:04    <DIR>          Google
+2019-10-07  오후 12:00    <DIR>          Internet Explorer
+2021-03-29  오후 01:20    <DIR>          JetBrains
+2019-11-13  오후 08:53    <DIR>          Microsoft Office 15
+2021-04-08  오전 09:38    <DIR>          Microsoft SQL Server
+2019-03-19  오후 01:52    <DIR>          ModifiableWindowsApps
+2019-11-13  오후 08:50    <DIR>          MSBuild
+2021-03-26  오후 07:06    <DIR>          Naver
+2021-03-26  오후 06:57    <DIR>          NVIDIA Corporation
+2019-11-13  오후 08:50    <DIR>          Reference Assemblies
+2019-11-13  오후 09:35    <DIR>          Windows Defender
+2019-10-07  오후 12:00    <DIR>          Windows Defender Advanced Threat Protection
+2019-03-19  오후 01:52    <DIR>          Windows Mail
+2019-03-19  오후 09:32    <DIR>          Windows Media Player
+2019-03-19  오후 09:32    <DIR>          Windows Multimedia Platform
+2019-11-13  오후 08:32    <DIR>          Windows NT
+2019-03-19  오후 09:32    <DIR>          Windows Photo Viewer
+2019-03-19  오후 09:32    <DIR>          Windows Portable Devices
+2019-03-19  오후 01:52    <DIR>          Windows Security
+2019-03-19  오후 01:52    <DIR>          WindowsPowerShell
+               0개 파일                   0 바이트
+              28개 디렉터리  71,897,370,624 바이트 남음
+
+C:\Program Files>cd ..
+
+C:\>d..
+'d..'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\>d:
+
+D:\>cddir
+'cddir'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+D:\>dir
+ D 드라이브의 볼륨: 새 볼륨
+ 볼륨 일련 번호: EA8D-0F5A
+
+ D:\ 디렉터리
+
+2021-04-08  오후 06:12    <DIR>          프로그램
+2021-04-08  오전 09:30    <DIR>          학생방
+               0개 파일                   0 바이트
+               2개 디렉터리  313,702,596,608 바이트 남음
+
+D:\>cd 학생방
+
+D:\학생방>dir
+ D 드라이브의 볼륨: 새 볼륨
+ 볼륨 일련 번호: EA8D-0F5A
+
+ D:\학생방 디렉터리
+
+2021-04-08  오전 09:30    <DIR>          .
+2021-04-08  오전 09:30    <DIR>          ..
+2021-04-01  오후 06:06    <DIR>          kjm
+2021-04-01  오후 06:06        10,494,597 kjm.zip
+2021-04-09  오후 03:05    <DIR>          lsw
+               1개 파일          10,494,597 바이트
+               4개 디렉터리  313,702,596,608 바이트 남음
+
+D:\학생방>cd lsw
+
+D:\학생방\lsw>cd git
+
+D:\학생방\lsw\git>mkdir gittest
+
+D:\학생방\lsw\git>cd gittest
+
+D:\학생방\lsw\git\gittest>git init (깃 폴더 생성)
+Initialized empty Git repository in D:/학생방/lsw/git/gittest/.git/
+
+D:\학생방\lsw\git\gittest>
+
+
+D:\java\source\java01\src>git config --list (깃 상태 확인)

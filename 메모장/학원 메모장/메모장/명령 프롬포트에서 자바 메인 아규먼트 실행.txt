@@ -1,0 +1,122 @@
+******명령 프롬포트에서 자바 메인 아규먼트 실행
+
+
+Microsoft Windows [Version 10.0.18363.476]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\301-11>d:
+
+D:\>cd D:\학생방\lsw\java
+
+D:\학생방\lsw\java>java11
+'java11'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+D:\학생방\lsw\java>cd java11
+
+D:\학생방\lsw\java\java11>cd bin
+
+D:\학생방\lsw\java\java11\bin>cd java11
+
+D:\학생방\lsw\java\java11\bin\java11>cd..
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main
+
+D:\학생방\lsw\java\java11\bin>jaca java11.J20210420_04_main
+'jaca'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main qq
+qq
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main python java
+python
+java
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main
+관리자
+
+D:\학생방\lsw\java\java11\bin>System.out.println("관리자");1111
+'System.out.println'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+D:\학생방\lsw\java\java11\bin>System.out.println("관리자");
+'System.out.println'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+D:\학생방\lsw\java\java11\bin>
+
+D:\학생방\lsw\java\java11\bin>
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main zzz
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main qwe
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main
+아이디는?
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java 1111
+아이디는?
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main zzzzzz
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+        at java11.J20210420_04_main.main(J20210420_04_main.java:19)
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java 1111
+아이디는?
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+        at java11.J20210420_04_main.main(J20210420_04_main.java:18)
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java 1111
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main zzz 4568
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main zzz 1111
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main qqq
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+        at java11.J20210420_04_main.main(J20210420_04_main.java:19)
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main qqq 4563
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main qqqq
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+        at java11.J20210420_04_main.main(J20210420_04_main.java:19)
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main qqqq 123
+일반
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java 456
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java 7896
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java 456
+일반
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java java 1111
+일반
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java 1111
+관리자
+
+D:\학생방\lsw\java\java11\bin>java java11.J20210420_04_main java 4568
+일반
+
+D:\학생방\lsw\java\java11\bin>

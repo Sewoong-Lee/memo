@@ -1,0 +1,20 @@
+@ControllerAdvice :컨트롤러에서 발생하는 예외를 전문적으로 처리하는 클래스
+dao, 서비스, 컨트롤러까지 throws Exception를 붙여줘서 에러를 넘김
+
+이후 클래스 하나에 @ControllerAdvice를 붙여 에러를 한곳에서 통합적으로 읽을 수 있게 만듬
+
+메소드 위에 @ExceptionHandler(Exception.class) 붙어야함
+
+
+
+
+*****************
+404 에러시 클래스에 만들고
+
+wep.xml 에 
+<init-param>
+	<param-name>throwExceptionIfNoHandlerFound</param-name>
+	<param-value>true</param-value>
+</init-param> 
+
+넣어야함

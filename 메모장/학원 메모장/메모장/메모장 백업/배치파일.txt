@@ -1,0 +1,11 @@
+************배치 어플리케이션
+
+quartz 라이브러리 다운로드
+http://www.quartz-scheduler.org/downloads/ 
+
+quartz-2.3.1-SNAPSHOT-distribution.tar.gz 다운
+
+압축풀고 라이브러리
+quartz-2.3.1-SNAPSHOT.jar
+
+웹인프 라이브러리 폴더에 넣음

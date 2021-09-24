@@ -1,0 +1,27 @@
+*******jstl 라이브러리
+
+https://tomcat.apache.org/download-taglibs.cgi
+
+Jar Files 4개 다운
+
+JSP의 WEB-INF-> LIB에 복사하면댐
+
+
+
+***참고 사이트
+https://programmingsummaries.tistory.com/84
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

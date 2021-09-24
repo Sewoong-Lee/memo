@@ -1,0 +1,4 @@
+다른 사람의 깃 복제
+
+git clone https://github.com/Sewoong-Lee/java-TIL.git javava
+(링크의 파일을 javava 폴더에 복제 하겠다.)

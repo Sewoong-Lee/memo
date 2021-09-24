@@ -1,0 +1,27 @@
+package ex08_inher;
+
+//부모 클래스
+class Person{
+	privateString name;
+	//protected : 자식 클래스만 접근 가능
+	void setName(String name) {  //부모에서 자식 데이터 이용 protected x 프라이빗이어야함
+		this.name = name;
+	}
+	void breath() {
+		System.out.println(name + "숨쉬기");
+	}
+	void eat() {
+		System.out.println(name + "먹기");
+	}
+}
+
+//자식 클래스
+class Stundent extends Person {
+	private String name = "학생";
+	Stundent(){
+		super.setName(name);  //부모에서 자식 데이터 이용 protected x 프라이빗이어야함
+	}
+	void learn() {
+	System.out.println(name + "배우다");
+	}
+}

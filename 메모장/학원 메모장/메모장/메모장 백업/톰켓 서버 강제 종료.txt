@@ -1,0 +1,5 @@
+cmd
+
+netstat -ano | find "8081"
+
+raskkill /f /pid 20492(8081의 리세닝 넘버)

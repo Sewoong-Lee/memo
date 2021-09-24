@@ -1,0 +1,3 @@
+포스트맨이 안읽히면 세팅에서
+INTERCEPTOR 꺼주기
+Send no - cache header 꺼주기

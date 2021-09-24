@@ -1,0 +1,12 @@
+SQL> connect sys as sysdba  //이거 쳐주고
+Enter password:  //비밀번호 입력
+Connected.  //알터 변경하겠다.  계정과 비밀번호를 바꾸겠다. 락도 풀겠다.
+SQL> alter user hr identified by hr account unlock;
+
+User altered.
+  //테스트 시작
+SQL> conn hr/hr //확인
+Connected.
+SQL> show user //확인
+USER is "HR"
+SQL> 

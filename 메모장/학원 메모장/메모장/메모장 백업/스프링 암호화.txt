@@ -1,0 +1,17 @@
+암호화 처리 
+
+메이븐레파지토리에서
+Spring Security Core
+Spring Security Web 5.5.1
+Spring Security Config
+
+pom.xml에 추가
+스프링 프레임웍 내부이므로 스프링 버전을 맞춰줘야함
+${org.springframework-version}
+5.2.11
+
+루트 컨텍스트에 빈 생성
+
+맴버 서비스 비밀번호 암호화
+(오토와이드, 암호화 실행)
+

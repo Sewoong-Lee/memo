@@ -1,0 +1,48 @@
+***마이바티스
+
+https://blog.mybatis.org/  ->  products
+
+https://github.com/mybatis/mybatis-3/releases/tag/mybatis-3.5.7
+다운
+
+압축풀고
+mybatis-3.5.7 파일만 필요
+
+이거 이클립스에 lib폴더에 복사
+
+****마이바티스 시작
+1. 컨피그파일 - 커넥션 자료
+2.매퍼파일 - 샐랙트, 인서트, 등 쿼리문장
+3. 생성코드 필요 - 
+-------------------------------------------------
+이클립스 src밑에 마이바티스 프로젝트 안에 xml파일 만듬
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+  </mappers>
+</configuration>
+
+복붙하기
+
+
+
+
+****마이바티스 참고사이트
+https://mybatis.org/mybatis-3/ko/getting-started.html
+

@@ -1,0 +1,15 @@
+String sql = "SELECT  sdate,\r\n" + 
+				"    nvl(max(decode(stime,1,subject)),' ') t1,\r\n" + 
+				"     nvl(max(decode(stime,2,subject)),' ') t2,\r\n" + 
+				"      nvl(max(decode(stime,3,subject)),' ') t3,\r\n" + 
+				"       nvl(max(decode(stime,4,subject)),' ') t4,\r\n" + 
+				"        nvl(max(decode(stime,5,subject)),' ') t5,\r\n" + 
+				"         nvl(max(decode(stime,6,subject)),' ') t6,\r\n" + 
+				"          nvl(max(decode(stime,7,subject)),' ') t7,\r\n" + 
+				"           nvl(max(decode(stime,8,subject)),' ') t8\r\n" + 
+				"FROM  schedule\r\n";
+				if(!startdate.equals("") && !enddate.equals("")) {
+				sql+="WHERE sdate BETWEEN ? and ?\r\n";
+				}
+				sql+="group by sdate\r\n" + 
+				"order by sdate ";

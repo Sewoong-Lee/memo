@@ -1,0 +1,29 @@
+aop - 관점
+
+어노테이션 방법으로 진행
+
+폼에
+<org.aspectj-version>1.9.6</org.aspectj-version>
+버전 변경
+
+		<!-- aop 스프링 라이브러리 -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-aop</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjtools -->
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjtools</artifactId>
+		    <version>${org.aspectj-version}</version>
+		</dependency>
+
+라이브러리 추가
+
+servlet-context.xml 에서
+아래 네임스페이스에서 aop체크(자동완성 위해)하고
+<aop:aspectj-autoproxy/> 내용 추가
+

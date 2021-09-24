@@ -1,0 +1,139 @@
+ls -l
+
+pwd 현 위치
+
+cd ~ 홈 디렉토리로 바로가기
+
+cd 폴덜이름   - 그 폴더로 바로 이동
+
+cd /   최상위 디렉토리로 이동
+
+
+
+루트의 계정의 패스워드 설정 (최상위 권한자)
+sudo passwd root  (루트의 패스워드를 바꿔주겠다)
+
+3번 넣기
+첫번째 우분투의 패스워드
+두번째 루트의 패스워드는 뭐로할꺼?
+세번째 다시 확인해보자
+
+su -    루트로 접속 -> 패스워드 넣으면 접속  루트 계정일경우 # 일반 계정은 $
+
+su - ubuntu  > 다시 우분투로 간다
+
+
+cd .. 부모 디렉토리 (상위로)
+cd . 
+
+바로 근처에 있으면 cd bin 처럼 슬레시 안씀
+cat (파일 이름)  파일 내용 보기
+
+앞에 d는 디렉토리
+없는건 일반파일
+l은 링크파일
+
+
+shutdwon -r now 지금 리부트 하겠다
+shutdwon -h now 종료 하겠다.
+
+내 현 위치 중심 상대경로
+최상위 단계에서 중심 절대경로
+
+----리눅스 한글 깔기
+세팅 랭기지 
+메너지 랭기지 신스톨
+인스톨 -> 랭기지에 한글 보일때까지
+보이면 인풋 랭기지에 한글 추가
+세팅에서 한영키 전환키변경
+재부팅 필요
+
+man ls     -> ls의 도움말  q누르면 끝남
+ls --help   -> ls도움말 한번에 다보기
+
+
+touch sample.txt -> 빈 텍스트파일 만들기
+cat sample.txt  -> 샘플 텍스트파일의 내용 보기 
+nano sample.txt  -> 샘플 텍스트파일의 내용 수정 (이거로 바로 만들어도댐)
+rm sample.txt  -> 샘플 텍스트파일 삭제
+
+cp test.txt testt.txt  -> 복사
+mkdir test  -> 테스트라는 폴더 생성
+mv testt.txt test  -> 테스트 폴더로 이동
+rmdir test  -> 폴더 삭제
+
+find  / -name (파일명)  -> 파일명 검색
+sudo find  / -name (파일명)  -> 최상위 권한으로 파일명 검색
+sudo find  / -name (파일명) | head  -> 헤드만 검색
+
+ls -l | more 한페이지 단위로 확인
+ls -l | head  앞에만 보겠다
+ls -l | tale  끝만 보겠다
+ls -l | grep zip 집이 포함된거만 검색 
+
+
+chmod 777 test.txt  -> 권한 다품
+chmod 750 test.txt  -> 유저 rwx 그룹rx 아더 권한 없음 
+chmod 744 test.txt ->
+
+
+sudo apt install net-tools  -> 콘피그 인스톨
+ifconfig -> 아이피 확인
+
+natstat -ano | grep bus -> 버스가 포함된거만 확인
+
+cd /proc -> 돌아가고있는 프로세스 폴더
+ps - ef | grep mysql ->마이에스큐엘 프로세스만 확인
+kill -9 (프로세스아이디(4283))  -> 프로세스 종료
+
+----------mysql 깔기
+sudo apt-get update  -> 업데이트 해줌
+sudo apt-get install mysql-server  -> 마이에스큐엘 인스톨(중간에 y해줘야함)
+
+ps -ef | grep mysql  -> 마이에스큐엘 프로세스에서 확인(안해도댐)
+
+sudo kill -9 (프로세스아이디)  - 프로세스 종료 (근데 계속 바뀜)(안해도댐)
+
+sudo service mysql stop  -> 마이에스큐엘 정지(안해도댐)
+sudo service mysql start  -> 시작
+
+bg -> 백그라운드 확인
+fg $1 ->작업 다시 시작
+
+sudo mysql -u root -> mysql 실행
+alter user 'root'@'localhost' identified with mysql_native_password by '1111'; ->패스워드 설정
+sudo mysql -u root -p ->패스워드로 실행 (패스워드 설정했으면 이거로 해야함)
+quit -> 빠져나가기
+show databases;  -> msq 데이터 베이스 확인
+create database testdb;  -> 데이터베이스 만들기
+use testdb;  ->데이터베이스바꾸기
+show tables; -> 테이블 확인
+create table sample(name varchar(10));  -> 테이블 생성
+desc sample;  ->db확인
+
+drop table sample;  -> 테이블 삭제
+
+ -> 보통 이렇게 한번에 쓰고 넣음
+create table sample(
+name varchar(10) not null,
+year int
+);
+
+
+
+
+--윈도우에서--
+netstat -ano | find "8080" ->스로세스 목록 중 8080이 포함된거만 고름
+(맨뒤의 숫자가 프로세스아이디) 포트 번호가 8080이다
+
+taskkill /f /pid (프로세스 아이디) 하면 프로세스 종료할수 있음 (근데 락걸려서 거부댐) (cmd 관리자 권한으로 실행)
+
+
+
+
+
+
+
+
+
+

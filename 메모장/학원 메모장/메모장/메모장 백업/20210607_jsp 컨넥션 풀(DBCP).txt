@@ -1,0 +1,25 @@
+***컨넥션 풀(DBCP)
+
+JNDI를 이용한 컨넥션 풀
+
+이클립스-> 서버-> 톰캣 -> 컨텍스트.xml 에 환경값 저장
+-> 아래 내용 참고
+
+
+--------------------------------------------------------------------
+    <!-- dbcp설정 -->
+    <!-- maxTotal : 동시에 사용 가능한 컨넥션 개수 -->
+    <!-- maxIdle : 컨넥션풀에 반납할때 최대로 유지 될 수 있는 컨넥션 갯수 -->
+    <!-- maxWaitMillis : pool이 고갈되었을때의 최대 대기시간 -->
+    <Resource 
+    	name = "ora"
+    	auth = "Container"
+    	driverClassName = "oracle.jdbc.driver.OracleDriver"
+    	maxTotal = "10"
+    	maxIdle = "10"
+    	maxWaitMillis = "1000"
+    	type = "javax.sql.DataSource"
+    	url = "jdbc:oracle:thin:@localhost:1521:xe"
+    	username = "hr"
+    	password = "hr"
+    />

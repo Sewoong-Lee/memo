@@ -1,0 +1,8 @@
+
+
+vue 로컬 서버 러닝
+npm run serve
+
+프로젝트 폴더 들어가서
+
+vus_js/test1

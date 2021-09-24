@@ -1,0 +1,16 @@
+$('.alist').click(function(e) {
+			e.preventDefault();  //버튼의 기본기능 제거
+			var curpage = $(this).attr('href');
+			var findkey = $('#findkey').val();
+			var findvalue = $('#findvalue').val();
+			
+			//alert(findkey + findvalue);
+			//alert(curpage);
+			location.href = '${path}/board/list?curpage='+curpage+'&findkey='+findkey+'&findvalue='+findvalue;
+		});
+
+
+
+
+<a href="${blist.BNUM}" class="asubject">${blist.SUBJECT} (${blist.RCNT}) </a> </td>
+			

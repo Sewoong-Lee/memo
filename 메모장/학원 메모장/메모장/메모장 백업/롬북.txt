@@ -1,0 +1,20 @@
+롬북
+
+메이븐레파지토리
+
+spring lombok 검색
+
+Project Lombok 최신 1.18.20 메이븐 추가
+
+// 갯터셋터는 컴파일 시점에 필요하므로 작업 필요
+롬북 jar(소스 아님) 켜줘야함
+
+cmd
+롬북 경로 이동 cd C:\Users\stpn0\.m2\repository\org\projectlombok\lombok\1.18.20
+
+java -jar lombok-1.18.20.jar
+
+인스톨 석세스 나오면 끝
+
+GradeDAO
+public void insert(Grade grade);

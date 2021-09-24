@@ -1,0 +1,82 @@
+회원가입의 이메일 확인
+
+이메일 라이브러리 추가
+		<!-- 이메일 라이브러리 -->
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.7</version>
+		</dependency>
+		<!-- 이메일 서포트 라이브러리 -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context-support</artifactId>
+		    <version>${org.springframework-version}</version>
+		</dependency>
+
+스프링 방식으로 객체 생성 ->루트 컨텍스트 빈 생성
+	<!-- 이메일 인증 객체 생성 -->
+	<!-- username : 나의 이메일 -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com"/>
+		<property name="port" value="587"/>
+		<property name="username" value="stpnlsw@naver.com"/>
+		<property name="password" value="(내 비밀번호)"/>
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+맴버샌드메일 서비스 생성
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+보안 강화 풀어줘야한다
+https://myaccount.google.com/u/1/lesssecureapps?pli=1&rapt=AEjHL4Oj3ILNCNi85YtbaziNmuFgu1SjKM-EvC8FNtrVN_-Jc_4gtob9bMGNcIzWVWKZukmsTYyqplZKwUZrLPhpLjdyU4LWOw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

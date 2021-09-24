@@ -1,0 +1,172 @@
+D:\학생방\lsw\git\gittest>git config --global user.email "stpnlsw@naver.com"
+
+D:\학생방\lsw\git\gittest>git config --global user.name "sewoongLee"   //내 이름 등록
+
+D:\학생방\lsw\git\gittest>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=sewoongLee
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+D:\학생방\lsw\git\gittest>git config --global user.email "stpnlsw@naver.com"    //내 메일 등록
+
+D:\학생방\lsw\git\gittest>git --list
+unknown option: --list
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+D:\학생방\lsw\git\gittest>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=sewoongLee
+user.email=stpnlsw@naver.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+D:\학생방\lsw\git\gittest>git add test.txt     //add 스테이지에 파일 올린다구
+
+D:\학생방\lsw\git\gittest>git status      //깃의 상태 표시
+On branch master
+
+No commits yet      //근데 아직 커밋이 안됬다  2)
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)     //내릴꺼면 이리 해라 (도움말)
+        new file:   test.txt       //새로운 파일이 올라왔다  1)
+
+
+D:\학생방\lsw\git\gittest>git commit -m "test commit"     //커밋을 하고 메세지를 적음
+[master (root-commit) 4d25e5e] test commit
+ 1 file changed, 11 insertions(+)
+ create mode 100644 test.txt
+
+D:\학생방\lsw\git\gittest>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\학생방\lsw\git\gittest>git log
+commit 4d25e5e18819c0b6bf036f1b6094f5bf3f98f6ba (HEAD -> master)
+Author: sewoongLee <stpnlsw@naver.com>
+Date:   Fri Apr 9 16:37:28 2021 +0900
+
+    test commit
+
+D:\학생방\lsw\git\gittest>
+
+
+---------------------------------------------------------------------------------------------메모장 수정함
+
+
+D:\학생방\lsw\git\gittest>git status  //확인
+On branch master
+nothing to commit, working tree clean
+
+D:\학생방\lsw\git\gittest>git log
+commit 4d25e5e18819c0b6bf036f1b6094f5bf3f98f6ba (HEAD -> master)
+Author: sewoongLee <stpnlsw@naver.com>
+Date:   Fri Apr 9 16:37:28 2021 +0900
+
+    test commit
+
+D:\학생방\lsw\git\gittest>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.txt                       // 수정됬어!
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\학생방\lsw\git\gittest>
+
+D:\학생방\lsw\git\gittest>git add test.txt  //다시 에드
+
+D:\학생방\lsw\git\gittest>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   test.txt
+
+
+D:\학생방\lsw\git\gittest>git commit -m "2 commit"  //다시 커밋
+[master aa1e114] 2 commit
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+
+D:\학생방\lsw\git\gittest>
+
+D:\학생방\lsw\git\gittest>git log   //로그 확인
+commit aa1e11406057a84e4bdec95b8fb66bda2cdb1f15 (HEAD -> master)      //여기 대충 복사  (다시 여기로 돌릴꺼면)
+Author: sewoongLee <stpnlsw@naver.com>
+Date:   Fri Apr 9 16:45:03 2021 +0900
+
+    2 commit              //2번 커밋됬어!!
+
+commit 4d25e5e18819c0b6bf036f1b6094f5bf3f98f6ba
+Author: sewoongLee <stpnlsw@naver.com>
+Date:   Fri Apr 9 16:37:28 2021 +0900
+
+    test commit
+
+D:\학생방\lsw\git\gittest>
+
+D:\학생방\lsw\git\gittest>git checkout 4d25e5e1   
+Previous HEAD position was aa1e114 2 commit
+HEAD is now at 4d25e5e test commit
+
+D:\학생방\lsw\git\gittest>git checkout 4d25e5e1
+Previous HEAD position was aa1e114 2 commit
+HEAD is now at 4d25e5e test commit
+
+D:\학생방\lsw\git\gittest>git checkout
+
+D:\학생방\lsw\git\gittest>git checkout-    //다시 되돌리기
+git: 'checkout-' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+D:\학생방\lsw\git\gittest>git remote add origin https://github.com/Sewoong-Lee/test-20210409.git 내 깃 주소 넣음ㅁ
+
+D:\학생방\lsw\git\gittest>git remote -v   //확인
+origin  https://github.com/Sewoong-Lee/test-20210409.git (fetch)
+origin  https://github.com/Sewoong-Lee/test-20210409.git (push)
+
+D:\학생방\lsw\git\gittest>git push -u origin master   //연결 인증 후 완
+info: please complete authentication in your browser...

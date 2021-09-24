@@ -1,0 +1,87 @@
+D:\학생방\lsw\git\gittest\c>git init
+Initialized empty Git repository in D:/학생방/lsw/git/gittest/c/.git/
+
+D:\학생방\lsw\git\gittest\c>git add *.c
+warning: LF will be replaced by CRLF in c20210405_03_switch.c.
+The file will have its original line endings in your working directory
+
+D:\학생방\lsw\git\gittest\c>
+
+D:\학생방\lsw\git\gittest\c>
+
+D:\학생방\lsw\git\gittest\c>
+
+D:\학생방\lsw\git\gittest\c>git status (깃 상태 확인 스테이지만 올라감)
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   c20210402_01_printf_.c
+        new file:   c20210402_02_valiable.c
+        new file:   "c20210402_03_\354\227\260\354\202\260\354\236\220.c"
+        new file:   c20210405_01_scanf.c
+        new file:   c20210405_02_if.c
+        new file:   c20210405_03_switch.c
+        new file:   c20210405_04_while.c
+        new file:   c20210406_01_dowhile.c
+        new file:   c20210406_02_for.c
+        new file:   "c20210407_01_\353\260\260\354\227\264.c"
+        new file:   "c20210407_02_\353\213\244\354\260\250\354\233\220\353\260\260\354\227\264.c"
+        new file:   c20210407_03_string.c
+        new file:   "c20210408_01_\355\225\250\354\210\230.c"
+        new file:   "c20210408_02_\355\225\250\354\210\2302.c"
+        new file:   "c20210408_03_\352\270\200\353\241\234\353\262\214 \353\263\200\354\210\230.c"
+        new file:   "c20210408_04_\354\240\204\354\227\255\353\263\200\354\210\230 \355\231\234\354\232\251.c"
+        new file:   "c20210408_05_\355\217\254\354\235\270\355\204\260.c"
+        new file:   "c20210409_01_\353\254\270\354\236\220\355\230\225\355\217\254\354\235\270\355\204\260.c"
+        new file:   "c20210409_02_\355\217\254\354\235\270\355\204\260\355\225\250\354\210\230.c"
+        new file:   "c20210409_03_\355\217\254\354\235\270\355\204\2602\354\260\250\353\260\260\354\227\264.c"
+        new file:   "c20210409_04_\355\217\254\354\235\270\355\204\2602\354\260\250\353\260\260\354\227\264\355\225\250\354\210\230.c"
+
+
+D:\학생방\lsw\git\gittest\c>git commit -m "c"
+[master (root-commit) 434fdcd] c
+ 21 files changed, 2166 insertions(+)
+ create mode 100644 c20210402_01_printf_.c
+ create mode 100644 c20210402_02_valiable.c
+ create mode 100644 "c20210402_03_\354\227\260\354\202\260\354\236\220.c"
+ create mode 100644 c20210405_01_scanf.c
+ create mode 100644 c20210405_02_if.c
+ create mode 100644 c20210405_03_switch.c
+ create mode 100644 c20210405_04_while.c
+ create mode 100644 c20210406_01_dowhile.c
+ create mode 100644 c20210406_02_for.c
+ create mode 100644 "c20210407_01_\353\260\260\354\227\264.c"
+ create mode 100644 "c20210407_02_\353\213\244\354\260\250\354\233\220\353\260\260\354\227\264.c"
+ create mode 100644 c20210407_03_string.c
+ create mode 100644 "c20210408_01_\355\225\250\354\210\230.c"
+ create mode 100644 "c20210408_02_\355\225\250\354\210\2302.c"
+ create mode 100644 "c20210408_03_\352\270\200\353\241\234\353\262\214 \353\263\200\354\210\230.c"
+ create mode 100644 "c20210408_04_\354\240\204\354\227\255\353\263\200\354\210\230 \355\231\234\354\232\251.c"
+ create mode 100644 "c20210408_05_\355\217\254\354\235\270\355\204\260.c"
+ create mode 100644 "c20210409_01_\353\254\270\354\236\220\355\230\225\355\217\254\354\235\270\355\204\260.c"
+ create mode 100644 "c20210409_02_\355\217\254\354\235\270\355\204\260\355\225\250\354\210\230.c"
+ create mode 100644 "c20210409_03_\355\217\254\354\235\270\355\204\2602\354\260\250\353\260\260\354\227\264.c"
+ create mode 100644 "c20210409_04_\355\217\254\354\235\270\355\204\2602\354\260\250\353\260\260\354\227\264\355\225\250\354\210\230.c"
+
+D:\학생방\lsw\git\gittest\c>git remote add origin https://github.com/Sewoong-Lee/c-study.git
+
+D:\학생방\lsw\git\gittest\c>git remote -v
+origin  https://github.com/Sewoong-Lee/c-study.git (fetch)
+origin  https://github.com/Sewoong-Lee/c-study.git (push)
+
+D:\학생방\lsw\git\gittest\c>git push -u origin master
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (23/23), 19.21 KiB | 3.84 MiB/s, done.
+Total 23 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Sewoong-Lee/c-study.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+

@@ -1,0 +1,21 @@
+1024 -> 1kb
+1024k -> 1m
+
+스프링
+파일업로드
+
+commons-fileupload 폼에 추가
+
+스블릿xml파일에 아래 내용 추가
+
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="10485760"/>
+	</beans:bean>
+
+컨트롤러에서 파일을 받음
+public void add(Member member , MultipartFile file1{}
+이런식으로 멀티파트파일로 받아야함)
+
+그리고 jsp의 폼의 enctype을 바꿔줌
+enctype="multipart/form-data"
+

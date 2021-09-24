@@ -1,0 +1,14 @@
+WEB-INF 밑의 WEB.XML에서 사용자 정의 가능
+
+없으면 프로젝트 우클 - 자바EE툴 - 제네레이트... 클릭하면 생성 완
+
+
+
+document.getElementById('time').innerHTML 정의 한번 찾아보자
+
+
+var se = '<%= (String)session.getAttribute("email") %>';  여기에 따옴표 왜쓰는거지?
+
+	if(se == 'null'){
+		location.href='${path}/ex07_member/login.jsp?msg=로그인하셈';
+	} 

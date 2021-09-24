@@ -1,0 +1,80 @@
+		String sql = "SELECT * FROM  member\r\n";
+				if(!listfield.equals("") && !listvalue.equals("")) {
+					if(listfield.equals("email")) {
+						sql+="WHERE email = ? ";
+					}else if(listfield.equals("nicname")) {
+						sql+="WHERE nicname = ? ";
+					}else if(listfield.equals("phone")) {
+						sql+="WHERE phone = ? ";
+					}else if(listfield.equals("addr")) {
+						sql+="WHERE addr = ? ";
+					}else {
+						sql+="";
+					}
+				}
+
+
+
+
+
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="includ.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check() {
+		var listfield = listform.listfield.value;
+		var listvalue = listform.listvalue.value;
+		alert(listfield);
+		alert(listvalue);
+ 		if(listfield != 'all'){
+			if(listvalue==''){
+				alert('값을 입력해 주세요.');
+			}
+		}else{ 
+			//listform.submit();
+			location.href="${path}/list.member?listfield="+listfield+"&listvalue="+listvalue;
+		}
+	}
+
+</script>
+</head>
+<body>
+	<h2>전체 회원 조회</h2>
+	<form action="${path}/list.member" name="listform">
+	<fieldset>
+		<select name="listfield">
+			<option value="all">전체조회</option>
+			<option value="email">이메일</option>
+			<option value="nicname">닉네임</option>
+			<option value="phone">폰번호</option>
+			<option value="addr">주소</option>
+		</select>
+		<input type="text" name="listvalue">
+		<button type="button" onclick="check()">확인</button>
+	</fieldset>
+	</form>
+	<div>
+	출력값 <br>
+	
+	<c:forEach var="list" items="${list}">
+		이메일 : ${list.email} <br>
+		패스워드 : ${list.passwd} <br>
+		닉네임 : ${list.nicname} <br>
+		폰 : ${list.phone} <br>
+		주소 : ${list.addr} <br>
+		생성일 : ${list.regdate} <br>
+		수정일 : ${list.modifydate} <br>
+		<hr>
+	</c:forEach>
+	
+	</div>
+	
+</body>
+</html>

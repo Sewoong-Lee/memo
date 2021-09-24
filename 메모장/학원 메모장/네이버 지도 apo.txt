@@ -1,0 +1,23 @@
+네이버 지도 api
+
+https://www.ncloud.com/product/applicationService/maps 접속
+
+회원가입 하고 로그인
+
+서비스 이용신청
+
+어플리케이션 등록
+
+신청할 거 선택 (웹 다이나믹, 스테틱맵 , 지오코딩)
+
+맨 위 어플리케이션 이름 넣기
+
+웹 서비스 URL 넣기
+
+https://navermaps.github.io/maps.js/docs/tutorial-digest.example.html
+예제 사이트
+
+네이버 api 콘솔 -> 맨 아래 ai뭐시기 -> 개발 가이드
+
+예제 사용
+

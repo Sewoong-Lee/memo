@@ -1,0 +1,121 @@
+-콘솔창을 열면 이렇게 뜹니다.
+
+ 
+
+혹시나 콘솔이 사용되지 않는다! 하시는분은 이 콘솔을 먼저 쳐주세요
+
+RunScript("consolecommands")
+
+
+
+기본 명령어에서 적은 콘솔들은 여기에서는 제외했습니다.
+
+기본 명령어에서의 콘솔들도 투게더에서 적용이 됩니다. (적용되지 않는 콘솔들은 따로 작성했음)
+
+투게더의 콘솔들이 싱글에서도 적용되는지는 모르겠습니다...
+
+또한, 서버의 어드민이 아니라면 콘솔이 적용되지 않을 수 있습니다.
+
+
+
+
+
+c_goadventuring()     : 시작 아이템을 플레이어에게 줍니다.
+
+
+
+c_setmoisture(x)     : 습도를 설정한 대로 만듭니다. (x 에 소수를 쓰셔야합니다. 60%라면 0.6)
+
+c_settemperature(x)     : 온도를 설정한 대로 만듭니다.
+
+
+
+c_makeinvisible()     : 몬스터를 공격당하지 않게 만듭니다. 모든 상황에 적용되지는 않습니다.
+
+
+
+c_speedmult(x)     : 이동속도를 x 배로 설정합니다. 1이 기본속도고 12는 벽을 통과하고 물위를 걷습니다.
+
+
+
+GetPlayer().components.builder:GiveAllRecipes()    : 모든 것을 재료나 테크 없이 만들 수 있습니다. 한번 더 입력 시 해제됩니다.
+
+
+
+ThePlayer().components.health:SetMaxHealth(x)     : x 만큼 최대 체력을 설정합니다.
+
+ThePlayer().components.sanity:SetMax(x)     : x 만큼 최대 정신력을 설정합니다
+
+ThePlayer().components.hunger:SetMax(x)     : x 만큼 최대 배고픔을 설정합니다. 
+
+ThePlayer().components.hunger:Pause(true)     : 배고픔이 멈춥니다.
+
+ThePlayer.components.combat.damagemultiplier=[x]     : 대미지가 x 배로 설정됩니다.
+
+
+
+ThePlayer.components.beaverness:SetPercent(.01)     : 우디를 비버상태로 만듭니다.
+
+ThePlayer.components.beaverness:SetPercent(1)     : 비버상태를 해제합니다.
+
+
+
+c_listallplayers()     : 플레이어들의 닉네임과 번호를 보이게합니다.
+
+for i, v in ipairs(AllPlayers) do TheNet:SystemMessage(tostring(i) .. ": " ..v.name, false) end    
+
+ : 위의 명령어가 적용되지 않을 시, 사용해보세요.
+
+
+
+for k,v in pairs(AllPlayers) do x end     : x 자리에 명령어 입력 시, x 라는 명령어가 모든 플레이어에게 적용됩니다.
+
+
+
+c_move(AllPlayers[x])     : x 번호의 플레이어를 마우스 위치로 이동시킵니다.
+
+
+
+AllPlayers[x]:PushEvent('death')     : x 번호의 플레이어를 죽입니다.
+
+AllPlayers[x]:PushEvent('respawnfromghost')     : x 번호의 플레이어를 살립니다.
+
+AllPlayers[x].components.builder:GiveAllRecipes()     : x 번호의 플레이어에게 모든 것을 재료나 테크 없이 만들 수 있게 합니다.
+
+c_goto(AllPlayers[x])     : 나를 x 번호의 플레이어 옆으로 보냅니다.
+
+AllPlayers[x].components.inventory:DropEverything()     : x 번호의 플레이어의 아이템을 모두 떨어뜨립니다.
+
+c_despawn(AllPlayers[x])     : x 번호의 플레이어를 시작화면으로 보냅니다. (캐릭터 설정 화면) 아이템이 모두 사라집니다.
+
+ 
+
+ConsoleWorldEntityUnderMouse():Remove()     : 마우스 아래에 있는 물건을 제거합니다.
+
+c_select():Remove()     : 위와 같습니다.
+
+for k,v in pairs(Ents) do if v.prefab == "x" then v:Remove() end end     : x 아이템을 모두 제거합니다.
+
+
+
+minimap = TheSim:FindFirstEntityWithtag("minimap")     : 맵을 밝힙니다.
+
+TheWorld.minimap.MiniMap:ShowArea (0,0,0,10000)     : 위와 같습니다.
+
+
+
+for k,v in pairs(AllPlayer) do for x=-1600,1600,35 do for y=-1600,1600,35 do v.player_classified.MapExplorer:RevealArea(x,0,y) end end end
+
+ : 모든 플레이어의 맵을 밝힙니다.
+
+
+
+
+
+
+
+
+
+아직 완성되지 않았습니다.
+
+계속 수정할 예정입니다.
