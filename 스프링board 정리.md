@@ -1,3 +1,27 @@
+## model
+
+```java
+@GetMapping("detail")
+public void detail(Model model, int bnum, HttpSession seeeion) throws Exception{
+		//임시로 새션 아이디를 정할 수 있다
+		//seeeion.setAttribute("userid", "www");
+		//조회수 +1
+		String userid = (String)seeeion.getAttribute("userid"); //접속된 아이디
+		boardservice.readcountadd(bnum, userid); //잠깐 하드코딩
+		
+		//한건 조회
+		Map<String, Object> bfmap = boardservice.selectone(bnum, userid);
+		model.addAttribute("bfmap", bfmap);
+
+	}
+```
+
+Model 로 선언하며 뷰에서는 따로 ${bfmap.board.LIKEGUBUN} 등으로 받을 수 있다.
+
+${bfmap} 등으로 먼저 확인하고 나누어 받자!!
+
+
+
 ## 세션에 데이터 저장
 
 ```jav
