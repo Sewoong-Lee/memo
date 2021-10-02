@@ -1,0 +1,25 @@
+f12
+앨리멘트
+아래 스타일
+엘리멘트 스타일에서 바로 수정 가능
+
+
+border-radius: 0px 15px 15px 0px; - 모서리 둥글게
+
+
+**태그 정리
+https://yongku.tistory.com/entry/HTMLCSS-HTML5CSS-%EA%B8%B0%EB%B3%B8-%ED%83%9C%EA%B7%B8%EC%99%80-CSS-%EC%A0%95%EB%A6%AC
+
+http://easyspub.co.kr/20_Menu/BookView/PUB/421/PUB
+
+https://drive.google.com/file/d/1lwEULBs7wZRYy7Pr5tmbH4dZewlWiR3X/view
+
+https://doitnow-man.tistory.com/62
+https://docs.google.com/spreadsheets/d/1Lb059Adg3FkSk99WV3dz_8cu3qhsLO2FN1SHCfvRDL4/edit#gid=1119719651
+
+https://www.python2.net/questions-1121313.htm
+
+https://getbootstrap.kr/docs/5.1/layout/gutters/
+
+https://www.w3schools.com/bootstrap4/
+

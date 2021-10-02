@@ -1,0 +1,57 @@
+
+1) MV_TIME의 TIME_DAY형식 CHAR(10)로 변경(바차는 매퍼 같다오면 값을 안가져 와서....)
+
+2)회원 테이블의 ADMIN, EMAIL_AUTH, SIMPLE_JOIN 디폴트값 누락으로 
+ADMIN char(1)DEFAULT 1 not null,
+EMAIL_AUTH char(1) DEFAULT 0,
+SIMPLE_JOIN char(1)DEFAULT 0,
+으로 변경 요청
+
+3)좌석dto에 넘어오는 값 한번에 받기위해 아래 처럼 time_code 추가 부탁드립니다.
+public class Mv_seats {
+
+	private String seats_code;	
+	private int seats_row;	
+	private String seats_col;	
+	
+	private String time_code;	
+}
+
+
+
+***MV_CITY 테이블 목업 데이터
+insert into MV_CITY(CITY_CODE,CITY_NAME)values('ct1','서울');
+insert into MV_CITY(CITY_CODE,CITY_NAME)values('ct2','부천');
+insert into MV_CITY(CITY_CODE,CITY_NAME)values('ct3','인천');
+
+***CINEMA 테이블 목업 데이터
+insert into CINEMA(CINEMA_CODE,CITY_CODE,CINEMA_NAME,CINEMA_TEL)
+            values('cn01','ct1','신촌 CCV',0211111111);
+insert into CINEMA(CINEMA_CODE,CITY_CODE,CINEMA_NAME,CINEMA_TEL)
+            values('cn02','ct1','홍대 CCV',0222222222);
+insert into CINEMA(CINEMA_CODE,CITY_CODE,CINEMA_NAME,CINEMA_TEL)
+            values('cn03','ct1','강남 CCV',0233333333);
+
+***MV_TIME 테이블 목업 데이터
+insert into MV_TIME(TIME_CODE,CINEMA_CODE, MOVIE_NUM, TIME_DAY, TIME_TIME)
+values('ti01','cn01',1,'2021-08-04','07:00~09:00');
+
+(TIME_TIME VARCHAR2(5)에서 VARCHAR2(20)으로 변경)
+
+***MV_SEATS 테이블 목업 데이터
+insert into MV_SEATS(SEATS_CODE,SEATS_ROW, SEATS_COL)
+values('A-1',1,'A');
+insert into MV_SEATS(SEATS_CODE,SEATS_ROW, SEATS_COL)
+values('A-2',2,'A');
+insert into MV_SEATS(SEATS_CODE,SEATS_ROW, SEATS_COL)
+values('A-3',3,'A');
+insert into MV_SEATS(SEATS_CODE,SEATS_ROW, SEATS_COL)
+values('A-4',4,'A');
+insert into MV_SEATS(SEATS_CODE,SEATS_ROW, SEATS_COL)
+values('B-1',1,'B');
+insert into MV_SEATS(SEATS_CODE,SEATS_ROW, SEATS_COL)
+values('B-2',2,'B');
+insert into MV_SEATS(SEATS_CODE,SEATS_ROW, SEATS_COL)
+values('B-3',3,'B');
+insert into MV_SEATS(SEATS_CODE,SEATS_ROW, SEATS_COL)
+values('B-4',4,'B');

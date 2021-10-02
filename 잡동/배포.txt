@@ -1,0 +1,261 @@
+************네이버 클라우드
+
+네이버 클라우드 - 서비스 - 서버 - 이용신청 - 1세대 마이크로1  - 서버 생성
+
+우분투, 마이크로 설정
+
+우분투 18버전으로 다음
+
+디폴트로 다음
+
+인증키 이름 이후 인증키 생성(인증키 보관 필) 
+
+다음, 기본 방화벽 두고 다음
+
+서버 생성될떄까지 기달
+
+완료 이후 위의 포트포워딩 설정 포트 설정하고 (5555) 추가, 적용
+
+퓨티열고 아이피랑 만든 포트 입력 오픈 
+
+예 누르구 접속됨 잠깐 끄구
+
+서버 관리 및 설정변경 - 관리자 비밀번호 확인
+
+아까 받은 인증키 파일 끌어올림 - 비밀번호 확인 누르면 나옴
+
+root
+(D8LYTF+F?3t)
+
+퓨티에 입력 후 들어감
+
+불편하니 비밀번호 바꾸기 (passwd 치고 비밀번호 입력) 1111
+
+ sudo apt-get update 하고
+
+sudo apt-get install tomcat9 //톰캣 설치(jdk까지 같이 깔림)
+
+ps -ef | grep tomcat9 잘 깔렸는지 확인 (저거 파이프라인임)
+
+sudo service tomcat9 stop //톰캣 끄기 (스타트 시작 , 리스타트)
+
+ps -ef | grep tomcat9 으로 꺼졌는지 확인
+
+잘 되면 공인 ip받기
+
+네이버클라우드 아까 거기에서 왼쪽에 퍼블릭 아이피
+
+공인ip 신청 - 적용서버 설정하고 다음, 생성
+
+이제 서버 클릭하면 공인ip가 적용되있음
+
+http://118.67.135.173:8080/ 로컬호스트가 아닌 공인ip로 접속(방화벽 때문에 지금 안됨)
+
+네이버클라우드의 왼쪽 acg - acg설정 - 0.0.0.0/0 (모두 허용) , 8080 (톰캣 포트번호),  톰캣 서버 설정 - 추가
+
+****배포
+
+파일질라 
+sftp://27.96.128.80 (서버 접속용 공인ip)
+아까 적은 root 1111 5555 연결
+
+루트의 리모트사이트 /var/lib 적고 톰캣 찾아 들어감 
+웹에이피피 밑에 와르파일 넣으면댐
+
+**와르파일 만들기
+
+이클립스 - 프로젝트 우클 - 익스포트 - 웹  - 와르파일 - 위치 잡고 - 런타임은 톰캣9- 저장 - 피니시
+
+
+다시 파일질라 와서 와르파일을 톰캣의 wepapps에 옮김
+새로고침하면 배포 되어있음(폴더 생김)
+
+
+http://118.67.135.173:8080/sp03_board_mysql/ 이렇게 들어가면 화면 나옴 (war파일의 이름이 컨텍스프 패스가 됨)
+(아직 db랑 이메일 인증, 다운로드폴더 등 설정 변경 필요)
+
+
+다시 퓨티
+sudo apt-get install mysql-server //마이에스큐엘 서버 다운로드
+
+ ps -df | grep mysql로 잘 깔려있는지 확인
+sudo service mysqlstop //마이에슼엘 끄기 (스타트 시작 , 리스타트)
+
+
+mysql -u root로 루트로 접속
+
+exit로 나갈 수 있음
+
+--------------------------------------------------------------------------------------------------------------------------------------
+****mysql **************************************************
+
+ ps -df | grep mysql  //마이에스큐엘 실행 여부 확인
+
+sudo service mysql start  //마이에스큐엘 시작
+
+sudo mysql -u root  //마이에스큐엘 진입
+
+alter user 'root'@'localhost' identified with mysql_native_passsword by '1111';  //복사는 안됨
+
+exit //나가기
+
+이제는 그냥 접속이 안됨
+
+sudo mysql -u root -p 엔터치고 패스워드 앤터
+
+#현재 접속된 user보기
+select user();
+
+#현재 db보기
+select database();
+
+현재 잡힌게 없음
+
+#mysql db사용
+use mysql;
+
+ show tables;  //테이블 보기
+
+select * from user;  //유저 테이블 확인
+
+
+desc user; //항목 걸러보기
+
+select host, user from user; //호스트랑 유저만 보기
+
+
+#사용자 생성 :user명@접속host
+create user 'test'@'%' identified by '1111';
+
+
+#db생성
+create database testdb;
+
+
+#test 사용자에게 db접속 권한 부여
+grant all privileges on testdb.* to 'test'@'%';
+
+
+exit  //나가고
+
+테스트로 접속
+sudo mysql -u test -p
+
+테이블 만들기
+create table test2(
+name varchar(20) not null,
+age int not null
+);
+
+//기존 마이에스큐엘 만든 테이블 긇어서 복사
+
+#mysql shell에서 default character set 확인
+status;
+
+ show create database testdb;  //데이터 베이스 캐릭터셋 체크
+
+exit 로 나가고
+cd /etc 폴더로 이동
+ cd mysql 이동
+
+ls -l my.cnf //있는지 확인
+sudo nano ./my.cnf // 수정하러 들어가기
+
+///내용 추가
+[mysqld]
+character-set-server=utf8
+[client]
+default-character-set=utf8
+[mysql]
+default-character-set=utf8
+
+컨트롤x ->y -> 앤터
+
+ cat my.cnf //확인
+
+sudo service mysql restart  //마이에스큐엘 재시작
+
+ 
+루트로 들어가고
+
+create database test2db;
+
+show create database test2db;
+//디폴트가 utf8임
+
+show tables; //테이블 확인
+show full tables; //테이블 옵션까지 확인
+
+맴버에
+create index inx_memer_zip on MEMBER (ZIP); 로 인덱스 생성
+desc MEMBER; 확인
+
+//뷰 만들기
+CREATE VIEW v_memer_sample
+AS
+SELECT USERID, EMAIL 
+FROM MEMBER;
+
+인서트하고
+INSERT INTO MEMBER (userid, passwd, email, ZIP)
+VALUES ('hong', '1111', 'hong@GMAIL.COM', '11111');
+
+뷰 확인
+select * from v_memer_sample;
+
+select * from information_schema. 'TABLES';
+use information_schema;  //시그마로 db이동
+show tables;
+desc TABLES;
+select TABLE_TYPE from TABLES;
+
+
+//일일 판매 뷰 만들어보기
+CREATE VIEW v_sale_date
+AS
+select s.saledate, i.itemname, i.itemcode, sum(s.qty*i.price) amount
+from sales s join item i on (s.itemcode = i.itemcode)
+group by s.saledate, i.itemname, i.itemcode;
+
+create index inx_sale on item (itemname);
+
+select * from v_sale_date;
+desc v_sale_date;
+ show full tables;
+
+
+******************************************************************************************
+
+배포 리눅스
+
+루트 컨텍스트 변경
+(데이터소스, 파일 디렉토리, )
+서블릿 에서도 (읽어오는 리소스 경로 바꿔줌)
+
+컨텍스트패스 변경됨
+
+aop 스루스이셉션
+어드바이스의 이셉션 처리
+뷰에도 뿌리게 jsp 추가 작성
+
+파일질라 이용해서 배포
+
+퓨티 들어가서
+cd /var/lib/tomcat9/webapps
+가서
+mkdir upload 로 폴더 생성
+
+chmod 777 upload
+으로 권한 주기
+
+마이에스큐엘
+
+mysql - 그거 들어가서
+
+테스트 디비로 가고
+
+테이블 다 생성 (쇼 테이블스로 보고) (소문자로)
+
+공인아이피로 네이버 클라우드 서버 접속(크롬으로)
+
+

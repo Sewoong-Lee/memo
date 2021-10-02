@@ -1,0 +1,87 @@
+기본 이벤트 삭제
+$('#filelist').on('click', '.btnfileremove', function(e) {
+	e.preventDefault();
+	//alert('삭제');
+			
+	//선택한 자신의 부모 단위를 삭제
+	$(this).parent().remove();	
+});
+
+*****갯으로 넘기기
+$('.alist').click(function(e) {
+			e.preventDefault();  //버튼의 기본기능 제거
+			var curpage = $(this).attr('href');
+			var findkey = $('#findkey').val();
+			var findvalue = $('#findvalue').val();
+			
+			//alert(findkey + findvalue);
+			//alert(curpage);
+			location.href = '${path}/board/list?curpage='+curpage+'&findkey='+findkey+'&findvalue='+findvalue;
+		});
+
+$('#btnrepsave').click(function() {
+	var bnum = ${bfmap.board.BNUM};
+	var content = $('#repcontent').val();
+	var restep = $('#restep').val();
+	var relevel = $('#relevel').val();
+	console.log(bnum+'  '+repcontent+'  '+restep+'  '+relevel);
+	
+	//댓글 div를 이동 (댓글 리스트를 뿌릴때 댓글창은 사라짐)
+	$('#replyadd').insertAfter('#rep0');
+	$('#replyadd').hide();
+	
+	$.ajax({
+		url:'${path}/reply/',  //restfull하게 설계
+		type:'post',  //메소드 방식
+		contentType:'application/json',  //보내는 데이터 타입
+		data:JSON.stringify({bnum,content,restep,relevel}),  //보낼 데이터
+		//dataType:'json', //서버에서 받는 타입
+		dataType:'text', //서버에서 받는 타입
+		success:function(data){
+			console.log(data);
+			//댓글 리스트 조회(아래 댓글리스트 조회 템플릿 펑션)
+			//템플릿 소스 가져오기
+			replylist();
+			
+		},
+		error:function(err){
+			console.log(err);
+			alert('실패');
+		}
+		
+	});
+});
+
+
+	//댓글 수정
+	@ResponseBody 
+	@RequestMapping(value = "/{rnum}", method = RequestMethod.PUT, //{RequestMethod.PUT,RequestMethod.PATCH} 2개 이상의 메소드 처리 가능
+	produces = "application/text; charset=utf-8")
+	public String update(@RequestBody Reply reply) { // @RequestBody 제이슨 형식을 받을때
+		//수정
+		replyservice.update(reply);
+		return "수정 완료";
+	}
+
+
+
+
+
+
+
+$.ajax({
+		url:'${path}/reply/list/'+bnum,  //restfull하게 설계
+		type:'get',  //메소드 방식
+		dataType:'json', //서버에서 받는 타입
+		success:function(data){
+			console.log(data);
+			//댓글리스트 탬플릿을 이용해서 추가
+			var source = $('#replylist_template').html();
+			var template = Handlebars.compile(source);
+	        $('#replist').html(template(data));
+		},
+		error:function(err){
+			console.log(err);
+			alert('실패');
+		}
+	});
