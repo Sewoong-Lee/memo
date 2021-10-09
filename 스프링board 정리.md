@@ -177,3 +177,24 @@ ${bfmap} 등으로 먼저 확인하고 나누어 받자!!
 	}
 ```
 
+
+
+## redirectAttributes
+
+```java
+@RequestMapping(value = "/kor/sdfac/testmap/mapInsert.do", method = RequestMethod.POST)
+	public String MapInsert(@RequestParam Map<String, Object> commandMap, Model model,
+			HttpServletRequest request, HttpServletResponse response, RedirectAttributes redirectAttributes) throws Exception {
+        
+        redirectAttributes.addFlashAttribute("Confirm", "success");
+		redirectAttributes.addFlashAttribute("Confirm_alert", "정상적으로 등록 되었습니다.");
+		redirectAttributes.addFlashAttribute("Confirm_url", "/kor/sdfac/rent/application_result.do");
+		
+		//return "redirect:/common/kor/sdfac/Confirm.do";
+		System.out.println("commandMap2 "+commandMap.toString());
+		
+        return "redirect:list";
+	}
+```
+
+redirectAttributes 를 사용하여 redirect 작동시 정보 전달 가능
