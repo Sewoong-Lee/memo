@@ -291,7 +291,7 @@ a[href*="tuts"] {
 - 사파리
 - 오페라
 
-## 13. X[href^="http"]
+## 13. X[href^="http"] (시작 잡기)
 
 ```
 a[href^="http"] {
