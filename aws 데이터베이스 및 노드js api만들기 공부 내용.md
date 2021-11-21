@@ -44,6 +44,10 @@ Elastic Beanstalk 검색하여 들어가기 -> 시작하기
 
 (접속할 포트를 지정)
 
+** 문제가 생길시 로그에서 확인 가능
+
+
+
 #### CodePipeline (깃허브와 Elastic Beanstalk를 연결)
 
 깃허브에 변화가 있을시 자동 적용을 시켜준다.
