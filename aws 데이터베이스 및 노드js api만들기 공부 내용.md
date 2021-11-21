@@ -1,5 +1,7 @@
 #### npm 사이트  https://www.npmjs.com/
 
+https://medium.com/withj-kr/nodejs-express%EB%A1%9C-%EC%84%9C%EB%B2%84-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-1-express-%EA%B8%B0%EB%B3%B8%EA%B8%B0-c0245b4120bc 참고
+
 
 
 아마존 웹서비스 가입 (도시를 서울로 변경)
@@ -268,4 +270,24 @@ const PORT = process.env.PORT || 3000;
 
 app.listen(PORT)
 ```
+
+
+
+
+
+## 이후 추가 공부
+
+.env 로 환경변수 추가
+
+https://velog.io/@public_danuel/process-env-on-node-js 
+
+https://rangsub.tistory.com/111?category=981158 참고
+
+
+
+리엑트 axios로 요청 보내기
+
+https://wonit.tistory.com/305 참고
+
+
 
