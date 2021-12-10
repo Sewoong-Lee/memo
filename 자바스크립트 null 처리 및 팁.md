@@ -60,6 +60,8 @@ console.log("ABC"); // false
 
 #### 자바스크립트 새로고침 코드 3가지
 
+
+
 ```javascript
 location.reload(true);
 location.href = location.href;
