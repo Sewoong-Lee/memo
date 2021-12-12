@@ -72,3 +72,5 @@ SELECT Age FROM My_Table WHERE (No_Emp BETWEEN '0000' AND '0010') OR (Age BETWEE
 
 
 
+헤빙
+
