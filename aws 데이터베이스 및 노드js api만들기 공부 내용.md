@@ -306,3 +306,65 @@ https://any-ting.tistory.com/14
 
 
 http://nodeserver-env.eba-atnf6giu.ap-northeast-2.elasticbeanstalk.com/a?id=2
+
+
+
+
+
+
+
+
+
+# AWS S3
+
+https://hunjang.tistory.com/19
+
+https://cdn.discordapp.com/attachments/868002137412603930/918423939124957224/unknown.png
+
+
+
+AWS 에서 S3 접속
+
+
+
+버킷 생성
+
+
+
+ACL 활성화
+
+퍼블릭 엑세스 차단 풀기
+
+
+
+이미지 업로드 후 객체 URL로 확인
+
+
+
+노드 S3 파일 업로드 코드
+
+```
+const AWS = require("aws-sdk");
+const fs = require("fs");
+require("dotenv").config({ path: __dirname + "\\" + ".env" });
+
+const s3 = new AWS.S3({
+  accessKeyId: "AKIA4SU5OUHHFVDGQWHJ", //process.env.AWS_ACCESS_KEY
+  secretAccessKey: "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", //process.env.AWS_SECRET_ACCESS_KEY
+  //region : 'us-east-1'
+});
+
+let params = {
+  Bucket: "name.ac",
+  Key: "image/bbb/" + "test",
+  ACL: "public-read",
+  Body: fs.createReadStream("./image/aa.jpg"),
+  //ContentType: "image/png",
+};
+
+s3.upload(params, function (err, data) {
+  console.log(err);
+  console.log(data);
+});
+```
+
