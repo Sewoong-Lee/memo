@@ -4,6 +4,8 @@ https://medium.com/withj-kr/nodejs-express%EB%A1%9C-%EC%84%9C%EB%B2%84-%EA%B5%AC
 
 
 
+
+
 아마존 웹서비스 가입 (도시를 서울로 변경)
 
 #### aws 데이터베이스 생성
