@@ -14,8 +14,6 @@ if문에서 else가 없는 단순 if문을 구성할때 사용할 수 있다.
 
 
 
-
-
 **IF ~ ELSE 문 : <c:choose>**
 
 우리가 많이 사용하는 if~else 문의 경우 jstl에서는 <c:choose>를 이용하여 구성하여야 한다.
